@@ -88,7 +88,7 @@ allData$activity[allData$activity==6] <- "LAYING"
 #
 idx <- grep("subjectid|activity|mean|std", names(allData))
 ds <- allData[,idx]
-  
+
 #
 # Summarize the data grouped by the subjectid and the activity
 # to produce a compact tidy data set.
@@ -106,7 +106,7 @@ names(sd) <- f
 #
 # Save the summarized data.
 #
-write.table(sd, "small_tidy_data.txt", sep=",")
+write.table(sd, "tidy_data.txt", sep=",", row.name=FALSE)
 #
 # Return to the "root" directory from the "data" directory.
 #
