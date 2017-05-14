@@ -104,5 +104,5 @@ sd <- dt[, lapply(.SD, mean), by = c("subjectid","activity")]
 Finally write the summarized tidy data to a comma seperated file
 
 '''
-write.table(sd, "small_tidy_data.txt", sep=",")
+write.table(sd, "small_tidy_data.txt", sep=",", row.name=FALSE)
 '''
